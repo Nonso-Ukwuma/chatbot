@@ -1,38 +1,107 @@
 .App {
   text-align: center;
+  width: auto;
+  margin: 1% auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rcw-header {
+  background-color: #325fe5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image {
+  align-items: start;
+  padding-left: 0%;
+  padding-right: 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Header {
+  background-color: #325fe5;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: stretch;
+  font-size: 4em;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  text-shadow: 5px 5px 10px rgb(70, 125, 234);
+  width: auto;
+  height: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 650px) {
+  
+  .App {
+    text-align: center;
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .image {
+    align-items: start;
+    padding-left: 0%;
+    padding-right: 20%;
+  }
+  
+  .Header {
+    background-color: #325fe5;
+    align-items: center;
+    justify-content: stretch;
+    font-size: 2em;
+    font-weight: bolder;
+    color: cornsilk;
+    text-shadow: 5px 5px 10px rgb(43, 43, 226);
+    width: auto;
+    height: 30%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  
+  .App {
+    text-align: center;
+    width: auto;
+  }
+  
+  .image {
+    align-items: start;
+    padding-left: 0%;
+    padding-right: 20%;
+  }
+  
+  .Header {
+    background-color: #325fe5;
+    align-items: center;
+    justify-content: stretch;
+    font-size: 3em;
+    font-weight: bolder;
+    color: cornsilk;
+    text-shadow: 5px 5px 10px rgb(43, 43, 226);
+    width: auto;
+    height:30%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  
+  .App {
+    text-align: center;
+    width: auto;
+  }
+  
+  .image {
+    align-items: start;
+    padding-left: 0%;
+    padding-right: 60%;
+  }
+  
+  .Header {
+    background-color: #325fe5;
+    align-items: center;
+    justify-content: stretch;
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: cornsilk;
+    text-shadow: 5px 5px 10px rgb(43, 43, 226);
+    width: auto;
+    height:30%;
   }
 }

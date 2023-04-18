@@ -1,7 +1,7 @@
 {
   "name": "chatapp",
   "version": "0.1.0",
-  "homepage": "https://nonnyboing.github.io/loyalist-chatbot",
+  "homepage": "https://nonso-ukwuma.github.io/chatbot",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  width: auto;
   margin: 1% auto;
 }
 
@@ -11,14 +10,14 @@
 .image {
   align-items: start;
   padding-left: 0%;
-  padding-right: 20%;
+  padding-right: 10%;
 }
 
 .Header {
   background-color: #325fe5;
   align-items: center;
-  justify-content: stretch;
-  font-size: 4em;
+  justify-content: center;
+  font-size: 3.5em;
   font-weight: bolder;
   color: rgb(255, 255, 255);
   text-shadow: 5px 5px 10px rgb(70, 125, 234);
@@ -26,6 +25,10 @@
   height: 40%;
   padding-top: 5%;
   padding-bottom: 5%;
+  border-radius: 25px;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 650px) {
@@ -38,7 +41,7 @@
   .image {
     align-items: start;
     padding-left: 0%;
-    padding-right: 20%;
+    padding-right: 10%;
   }
   
   .Header {
@@ -51,6 +54,8 @@
     text-shadow: 5px 5px 10px rgb(43, 43, 226);
     width: auto;
     height: 30%;
+    border-radius: 25px;
+    text-align: left;
   }
 }
 
@@ -64,7 +69,7 @@
   .image {
     align-items: start;
     padding-left: 0%;
-    padding-right: 20%;
+    padding-right: 10%;
   }
   
   .Header {
@@ -77,6 +82,8 @@
     text-shadow: 5px 5px 10px rgb(43, 43, 226);
     width: auto;
     height:30%;
+    border-radius: 25px;
+    text-align: left;
   }
 }
 
@@ -103,5 +110,7 @@
     text-shadow: 5px 5px 10px rgb(43, 43, 226);
     width: auto;
     height:30%;
+    border-radius: 25px;
+    text-align: left;
   }
 }

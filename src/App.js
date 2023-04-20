@@ -10,30 +10,24 @@ import axios from 'axios'
 
 function App() {
 
-  const user_message = { user_msg: "hi there"}
-  const post_header = { headers: { Authorization: "Token 765748457ff27599526cbe1ae2fd3c773fd76cdc"} }
-
   useEffect(() => {
     openChatWidget();
-    const message = 'Welcome to loyalist college, How can I help you today!'
+    const message = 'Hello, Welcome to loyalist college, I can provide details on the programs offered here at Loyalist College. Which program are you looking for today?'
     addResponseMessage(message)
-    /*
-    axios.post('http://137.184.170.69/botapi/askthebot/', user_message, post_header)
-            .then(res => {addResponseMessage(res.data.botresponse)})
-            .catch(err => console.error(err));
-    //console.log(data) */
+  
   }, []); 
+
 
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
-    // Now send the message throught the backend API
-    axios.post('http://137.184.170.69/botapi/askthebot/', user_message, post_header)
-            .then(res => {addResponseMessage(res.data.botresponse)})
-            .catch(err => console.error(err));
+    const user_message = { user_msg: newMessage}
+    const post_header = { headers: { Authorization: "Token 765748457ff27599526cbe1ae2fd3c773fd76cdc"} }
 
-    //console.log(`Response from Django Server: ${bot_data}`);
-    //const response = 'You are welcome buddy'
-    //addResponseMessage(response);
+    axios.post('http://137.184.170.69/botapi/askthebot/', user_message, post_header)
+            .then(res => {
+              addResponseMessage(res.data);
+              console.log(res.data);})
+            .catch(err => console.error(err));
   };
 
   function openChatWidget() {
@@ -50,7 +44,7 @@ function App() {
           handleNewUserMessage={handleNewUserMessage}
           profileAvatar={logo}
           title="Loyalist Chatbot"
-          subtitle="Admission Assistant"
+          subtitle="Program/Course Assistant"
         />
     </div>
   );

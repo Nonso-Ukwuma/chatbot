@@ -1,10 +1,15 @@
 .App {
   text-align: center;
   margin: 1% auto;
+  width: auto;
 }
 
 .rcw-header {
   background-color: #325fe5;
+}
+
+.rcw-message > .rcw-response {
+  font-size: smaller;
 }
 
 .image {
@@ -21,7 +26,7 @@
   font-weight: bolder;
   color: rgb(255, 255, 255);
   text-shadow: 5px 5px 10px rgb(70, 125, 234);
-  width: auto;
+  width: 100%;
   height: 40%;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -47,15 +52,19 @@
   .Header {
     background-color: #325fe5;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
     font-size: 2em;
     font-weight: bolder;
-    color: cornsilk;
-    text-shadow: 5px 5px 10px rgb(43, 43, 226);
-    width: auto;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgb(70, 125, 234);
+    width: 100%;
     height: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-radius: 25px;
     text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
   }
 }
 
@@ -75,15 +84,19 @@
   .Header {
     background-color: #325fe5;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
     font-size: 3em;
     font-weight: bolder;
-    color: cornsilk;
-    text-shadow: 5px 5px 10px rgb(43, 43, 226);
-    width: auto;
-    height:30%;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgb(70, 125, 234);
+    width: 100%;
+    height: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-radius: 25px;
     text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
   }
 }
 
@@ -103,14 +116,18 @@
   .Header {
     background-color: #325fe5;
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
     font-size: 2.5em;
     font-weight: bolder;
-    color: cornsilk;
-    text-shadow: 5px 5px 10px rgb(43, 43, 226);
-    width: auto;
-    height:30%;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 10px rgb(70, 125, 234);
+    width: 100%;
+    height: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-radius: 25px;
     text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
   }
 }

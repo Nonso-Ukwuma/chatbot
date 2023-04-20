@@ -4,7 +4,6 @@ import { Widget, addResponseMessage } from 'react-chat-widget-2';
 import "react-chat-widget-2/lib/styles.css";
 import React, {useEffect} from 'react';
 import {Header} from './Banner';
-//import data from './data/Intent - loyalist.json'
 import axios from 'axios'
 
 
@@ -25,8 +24,32 @@ function App() {
 
     axios.post('http://137.184.170.69/botapi/askthebot/', user_message, post_header)
             .then(res => {
-              addResponseMessage(res.data);
-              console.log(res.data);})
+              try {
+                if (!res.data.resp){
+                  let bot_resp = {
+                    message: res.data.response.message,
+                    title: res.data.response.course_details.course_title,
+                    college: res.data.response.course_details.college_name,
+                    delivery: res.data.response.course_details.program_delivery,
+                    campus: res.data.response.course_details.campus,
+                    intake: res.data.response.course_details.intake,
+                    url: res.data.response.course_details.program_url
+                  }
+                  let str = `${bot_resp.message.toUpperCase()} \n\n PROGRAM DETAILS:\n\n College Name: ${bot_resp.college} College\n Course Title: ${bot_resp.title}\n Campus: ${bot_resp.campus}\n Delivery: ${bot_resp.delivery}\n Intake Semester: ${bot_resp.intake}\nFor further details please visit : \n\n ${bot_resp.url}`
+                  console.log(res.data.response);
+                  console.log('Program Intent');
+                  addResponseMessage(str);
+                }
+                else {
+                  console.log(res.data.resp);
+                  console.log('Greeting Intent');
+                  addResponseMessage(JSON.stringify(res.data.resp));
+                }
+              } catch(err) {
+                throw err;
+              }
+              
+            })
             .catch(err => console.error(err));
   };
 
@@ -38,7 +61,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App rcw-message">
         <Header/>
         <Widget
           handleNewUserMessage={handleNewUserMessage}
